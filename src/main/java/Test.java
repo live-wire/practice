@@ -27,6 +27,12 @@ public class Test {
 		BST rev = bst.reverse(bst.top);
 		rev.printStructure();
 		rev.printBoundry();
+		int[] a = {2,3,7,9,10,4,6,1,8,5};
+		Sorts.selectionSort(a);
+		System.out.println();
+		Sorts.bubbleSort(a);
+		System.out.println();
+		Sorts.insertionSort(a);
 	}
 
 }
