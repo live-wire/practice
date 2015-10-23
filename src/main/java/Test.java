@@ -8,7 +8,7 @@ public class Test {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		BST bst = new BST(20);
+		/*BST bst = new BST(20);
 		bst.add(bst.top,8);
 		bst.add(bst.top,4);
 		bst.add(bst.top,12);
@@ -26,13 +26,21 @@ public class Test {
 		System.out.println();
 		BST rev = bst.reverse(bst.top);
 		rev.printStructure();
-		rev.printBoundry();
+		rev.printBoundry();*/
 		int[] a = {2,3,7,9,10,4,6,1,8,5};
 		Sorts.selectionSort(a);
 		System.out.println();
-		Sorts.bubbleSort(a);
+		int[] b = {2,3,7,9,10,4,6,1,8,5};
+		Sorts.bubbleSort(b);
 		System.out.println();
-		Sorts.insertionSort(a);
+		int[] c = {2,3,7,9,10,4,6,1,8,5};
+		Sorts.insertionSort(c);
+		System.out.println();
+		int[] d = {2,3,1,9,10,4,7,6,8,5};
+		Sorts.quickSort(d);
+		System.out.println();
+		int[] e = {2,3,1,9,10,4,7,6,8,5};
+		Sorts.mergeSort(e);
 	}
 
 }
