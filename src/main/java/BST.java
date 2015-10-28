@@ -11,6 +11,41 @@ public class BST
 		
 	}
 	
+	public boolean contains(Leaf up,int element)
+	{
+		if(up.data == element)
+			return true;
+		
+		boolean x = false;
+		boolean y = false;
+		if(up.left!=null)
+			x = contains(up.left,element);
+		if(up.right!=null)
+			y = contains(up.right,element);
+		
+		return x||y?true:false;
+	}
+	
+	public int findCommonParent(Leaf up,int element1,int element2)
+	{
+		if(contains(up, element1) && contains(up, element2))
+		{
+			
+				if(up.left!=null && contains(up.left, element1) && contains(up.left, element2)) 
+				{
+					return findCommonParent(up.left, element1, element2);
+				}
+				else if(up.right!=null && contains(up.right, element1) && contains(up.right, element2))
+				{
+					return findCommonParent(up.right, element1, element2);
+				}
+				else
+					return up.data;
+			
+		}
+		return 999;
+	}
+	
 	public void add(Leaf up,int a)
 	{
 		if(up.data < a)
